@@ -101,14 +101,12 @@ public:
 	stack() {};
 	stack(int _Size);
 	stack(const stack &b);
-	TValue * ReturnVal() { return mem[Index]; }
-	int GetSize() { return Index + 1; }
 	void push(TValue *val);
 	TValue * pop();
-	void clean() { Index = -1; }
-	stack &operator=(const stack &b);
+	TValue * ReturnVal() { return mem[Index]; }
 	bool stackFull();
 	bool stackEmpty();
+	stack &operator=(const stack &b);
 	friend ostream& operator<<(ostream &os, const stack &v);
 };
 
@@ -124,8 +122,6 @@ public:
 	int GetSize() { return size; }
 	int GetTop() { return top; }
 	int GetEnd() { return end; }
-	int GetResult();
-	TQ RPN();
 	void push(TValue *a);
 	TValue *pop();
 	TValue *& operator [](int index);

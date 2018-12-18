@@ -3,7 +3,6 @@
 int main()
 {
 	//Обратная польская запись (англ. Reverse Polish notation, RPN)
-	//TQ P(100);//Очередь для polish записи
 
 	TQ unP(100);//Очередь для обычной записи
 	char c[100] = "2+3*(19-9)-5+3";
@@ -22,15 +21,5 @@ int main()
 	res = P.RPN(unP); 
 	cout << "result: " << res << endl;
 
-	/*
-	TLex lex(unP);
-	unP = lex.convert(c);//Конвертируем строку в очередь
-	cout << unP << endl;
-	P = unP.RPN();//Переводим в польскую запись
-	cout << "RPN:" << P << endl;
-	int result;
-	result = P.GetResult();//Находим ответ
-	cout << "result= " << result << endl;
-	*/
 	return 0;
 }
