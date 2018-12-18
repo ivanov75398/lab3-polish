@@ -14,6 +14,7 @@ int TLex::pos(char *s, char c)
 TQ & TLex::convert(char * str)
 {
 	TQ turn(100);
+	std::string s;
 	int st = 0;
 	int i = 0;
 	char c;

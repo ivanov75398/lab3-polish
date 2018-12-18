@@ -134,7 +134,7 @@ public:
 
 class TLex {
 	//TQ turn;
-	std::string s;
+	//std::string s;
 public:
 	//TLex(TQ _turn) { turn = _turn; }
 	int pos(char *s, char c);
