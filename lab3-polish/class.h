@@ -93,8 +93,7 @@ public:
 	}
 };
 
-class stack
-{
+class stack {
 	int Size;
 	int Index;
 	TValue **mem;
@@ -123,6 +122,8 @@ public:
 	bool isempty();
 	bool isfull();
 	int GetSize() { return size; }
+	int GetTop() { return top; }
+	int GetEnd() { return end; }
 	int GetResult();
 	TQ RPN();
 	void push(TValue *a);
@@ -132,12 +133,18 @@ public:
 };
 
 class TLex {
-	TQ turn;
+	//TQ turn;
 	std::string s;
 public:
-	TLex(TQ _turn) { turn = _turn; }
+	//TLex(TQ _turn) { turn = _turn; }
 	int pos(char *s, char c);
-	TQ&convert(char *str);
+	TQ &convert(char *str);
+};
+
+class Polish: public TQ {
+public:
+	int RPN(TQ tq);
+	int GetResult(TQ tq);
 };
 
 int function_pos(char *s, char c);
